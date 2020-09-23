@@ -40,7 +40,6 @@ func initData()  {
 	redisPassword := Conf.Section("redis").Key("password").Value()
 	redisVmKey := Conf.Section("redis").Key("vm").Value()
 	redisDiskKey := Conf.Section("redis").Key("diskhostuuid").Value()
-	//vc := VCmonitor.Vcenter{}
 	flag := vcApi.Connect(vcHost,vcPort,vcUsername,vcPassword)
 	if flag == false {
 		golog.Error.Printf("vcenter connect fail,message:%v",err.Error())
