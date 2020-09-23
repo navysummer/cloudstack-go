@@ -12,30 +12,7 @@ import (
 )
 
 var (
-	//vcHost  string
-	//vcPort string
-	//vcUsername string
-	//vcPassword string
 	vcApi VCmonitor.Vcenter
-
-	//zbxHost string
-	//zbxPort string
-	//zbxUsername string
-	//zbxPassword string
-	//zbxVmnum int64
-	//hostGroup = make(map[string]string,0)
-	//diskGroup = make(map[string]string,0)
-	//hostTemplate = make(map[string]string,0)
-	//diskTemplate = make(map[string]string,0)
-	//agentInterface []map[string]string
-	//zbxApi *zabbix.Zabbix
-
-	//redisHost string
-	//redisPort string
-	//redisPassword string
-	//redisVmKey string
-	//redisDiskKey string
-	//rsApi *goredis.Redis
 )
 
 func initData()  {
@@ -69,7 +46,6 @@ func initData()  {
 		golog.Error.Printf("vcenter connect fail,message:%v",err.Error())
 		os.Exit(500)
 	}
-	//fmt.Println(vc)
 	var zbxUrl string
 	if zbxPort != "80"{
 		zbxUrl = fmt.Sprintf("http://%v:%v/zabbix",zbxHost,zbxPort)
@@ -147,10 +123,4 @@ func main()  {
 		vcApi.GetVms()
 		time.Sleep(time.Second*30)
 	}
-	//fmt.Println(data)
-	//host := "centos_6000C298-a47d-8871-ece2-f722d28d1b4c"
-	//perf := map[string]string{"disk_read_bytes_rate":"0.5"}
-	//serverip := "192.168.66.10"
-	//port := 10051
-	//zbxApi.SenderItemData(host,perf,serverip,port)
 }
