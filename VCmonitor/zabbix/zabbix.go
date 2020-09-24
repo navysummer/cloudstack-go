@@ -1,8 +1,8 @@
 package zabbix
 
 import (
-	"../golog"
-	"../gozabbix"
+	"VCmonitor/golog"
+	"VCmonitor/gozabbix"
 	"time"
 )
 
