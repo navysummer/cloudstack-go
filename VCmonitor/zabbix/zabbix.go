@@ -2,7 +2,7 @@ package zabbix
 
 import (
 	"VCmonitor/golog"
-	"VCmonitor/gozabbix"
+	"github.com/navysummer/gozabbix"
 	"time"
 )
 

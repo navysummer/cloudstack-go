@@ -3,7 +3,7 @@ package VCmonitor
 import (
 	"VCmonitor/golog"
 	"VCmonitor/goredis"
-	"VCmonitor/gozabbix"
+	"github.com/navysummer/gozabbix"
 	"VCmonitor/zabbix"
 	"context"
 	"encoding/json"
